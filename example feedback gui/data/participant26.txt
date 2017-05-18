@@ -1,0 +1,26 @@
+From:	Johnathan Mell
+Sent:	Tuesday, November 15, 2016 12:40 AM
+To:	Johnathan Mell
+Subject:	User data: A1MT1OXZGY8RJ2
+
+id,agent,userPoints,vhPoints,timedout,numUserOffers,numVHOffers,numUserPref,numVHPref,numUserMsg,numVHMsg,numUserLie,numVHLie,numUserEmote,numVHEmote
+A1MT1OXZGY8RJ2,Grumpy,35,35,false,1,0,0,0,0,3,0,0,0,1
+
+TIME,5,1,
+SEND_MESSAGE,Are you even still there?,0,
+OFFER_IN_PROGRESS,null,1,
+TIME,10,1,
+TIME,15,1,
+TIME,20,1,
+TIME,25,1,
+TIME,30,1,
+SEND_MESSAGE,Are you even still there?,0,
+TIME,35,1,
+TIME,40,1,
+TIME,45,1,
+SEND_OFFER,null,1,[ [5, 0, 0], [5, 0, 0], [0, 0, 5], [0, 0, 5] ],
+SEND_EXPRESSION,neutral,0,
+SEND_MESSAGE,That seems like a good deal.,0,
+TIME,50,1,
+FORMAL_ACCEPT,null,1,
+FORMAL_ACCEPT,null,0,

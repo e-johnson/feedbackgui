@@ -1,0 +1,52 @@
+From:	Johnathan Mell
+Sent:	Monday, November 14, 2016 11:26 PM
+To:	Johnathan Mell
+Subject:	User data: A1UY2W2FL9CWN
+
+id,agent,userPoints,vhPoints,timedout,numUserOffers,numVHOffers,numUserPref,numVHPref,numUserMsg,numVHMsg,numUserLie,numVHLie,numUserEmote,numVHEmote
+A1UY2W2FL9CWN,Pinocchio,35,35,false,1,0,0,0,4,9,0,0,0,1
+
+TIME,5,1,
+SEND_MESSAGE,Can I provide more information to help us reach consensus?,0,
+TIME,10,1,
+SEND_MESSAGE,Do you like bars of gold more than shipments of bananas?,1,1: 1 2: 2 LESS_THAN true
+SEND_MESSAGE,I like bars of gold more than shipments of bananas.,0,
+TIME,15,1,
+SEND_MESSAGE,It is important that we are both happy with an agreement.,1,
+SEND_MESSAGE,I agree!  What is your favorite item?  Mine is bars of iron.,0,
+TIME,20,1,
+TIME,25,1,
+SEND_MESSAGE,I like shipments of spices best.,1,1: 1 2: 2 LESS_THAN true
+SEND_MESSAGE,I like bars of iron the best!,0,
+TIME,30,1,
+TIME,35,1,
+SEND_MESSAGE,Do you like bars of gold less than shipments of bananas?,1,1: 1 2: 2 LESS_THAN true
+SEND_MESSAGE,I like bars of gold more than shipments of bananas.,0,
+TIME,40,1,
+OFFER_IN_PROGRESS,null,1,
+TIME,45,1,
+TIME,50,1,
+TIME,55,1,
+TIME,60,1,
+TIME,65,1,
+SEND_MESSAGE,Can I provide more information to help us reach consensus?,0,
+TIME,70,1,
+TIME,75,1,
+TIME,80,1,
+TIME,85,1,
+TIME,90,1,
+SEND_MESSAGE,Can I provide more information to help us reach consensus?,0,
+TIME,95,1,
+TIME,100,1,
+TIME,105,1,
+TIME,110,1,
+TIME,115,1,
+SEND_MESSAGE,Can I provide more information to help us reach consensus?,0,
+TIME,120,1,
+TIME,125,1,
+SEND_OFFER,null,1,[ [5, 0, 0], [5, 0, 0], [0, 0, 5], [0, 0, 5] ],
+SEND_EXPRESSION,happy,0,
+SEND_MESSAGE,Your offer is good!,0,
+TIME,130,1,
+FORMAL_ACCEPT,null,1,
+FORMAL_ACCEPT,null,0,

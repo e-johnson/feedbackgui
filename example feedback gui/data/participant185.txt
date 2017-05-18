@@ -1,0 +1,73 @@
+From:	Johnathan Mell
+Sent:	Monday, November 14, 2016 4:42 PM
+To:	Johnathan Mell
+Subject:	User data: A1K75ALN5NQIJM
+
+id,agent,userPoints,vhPoints,timedout,numUserOffers,numVHOffers,numUserPref,numVHPref,numUserMsg,numVHMsg,numUserLie,numVHLie,numUserEmote,numVHEmote
+A1K75ALN5NQIJM,Pinocchio,35,35,false,1,0,0,0,5,11,0,0,0,1
+
+TIME,5,1,
+SEND_MESSAGE,Can I provide more information to help us reach consensus?,0,
+TIME,10,1,
+TIME,15,1,
+TIME,20,1,
+SEND_MESSAGE,I like shipments of spices more than shipments of bananas.,1,1: 1 2: 2 GREATER_THAN true
+SEND_MESSAGE,I like shipments of spices less than shipments of bananas.,0,
+TIME,25,1,
+TIME,30,1,
+TIME,35,1,
+SEND_MESSAGE,I like shipments of bananas more than bars of gold.,1,1: 1 2: 2 GREATER_THAN true
+SEND_MESSAGE,I like shipments of bananas less than bars of gold.,0,
+TIME,40,1,
+TIME,45,1,
+TIME,50,1,
+TIME,55,1,
+SEND_MESSAGE,I like bars of gold more than bars of iron.,1,1: 1 2: 2 GREATER_THAN true
+SEND_MESSAGE,I like bars of gold less than bars of iron.,0,
+TIME,60,1,
+TIME,65,1,
+TIME,70,1,
+TIME,75,1,
+TIME,80,1,
+SEND_MESSAGE,Can I provide more information to help us reach consensus?,0,
+TIME,85,1,
+TIME,90,1,
+TIME,95,1,
+TIME,100,1,
+TIME,105,1,
+SEND_MESSAGE,Can I provide more information to help us reach consensus?,0,
+TIME,110,1,
+TIME,115,1,
+TIME,120,1,
+SEND_MESSAGE,Do you like bars of iron best?,1,1: 1 2: 2 GREATER_THAN true
+SEND_MESSAGE,I like bars of iron the best!,0,
+TIME,125,1,
+TIME,130,1,
+TIME,135,1,
+TIME,140,1,
+TIME,145,1,
+SEND_MESSAGE,Can I provide more information to help us reach consensus?,0,
+TIME,150,1,
+SEND_MESSAGE,Do you like bars of gold more than shipments of bananas?,1,1: 1 2: 2 GREATER_THAN true
+SEND_MESSAGE,I like bars of gold more than shipments of bananas.,0,
+TIME,155,1,
+TIME,160,1,
+OFFER_IN_PROGRESS,null,1,
+TIME,165,1,
+TIME,170,1,
+TIME,175,1,
+TIME,180,1,
+TIME,185,1,
+SEND_MESSAGE,Can I provide more information to help us reach consensus?,0,
+TIME,190,1,
+TIME,195,1,
+TIME,200,1,
+TIME,205,1,
+SEND_OFFER,null,1,[ [5, 0, 0], [5, 0, 0], [0, 0, 5], [0, 0, 5] ],
+SEND_EXPRESSION,happy,0,
+SEND_MESSAGE,Yes.  This deal will work.,0,
+TIME,210,1,
+TIME,215,1,
+TIME,220,1,
+FORMAL_ACCEPT,null,1,
+FORMAL_ACCEPT,null,0,
