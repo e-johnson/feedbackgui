@@ -1,10 +1,13 @@
+#this file creates a feedback gui based on a GUI designed using PYQT4 and data from IAGO 
+#
+
 from PyQt4.uic import loadUiType
 
 from matplotlib.figure import Figure
 import csv 
 from matplotlib.backends.backend_qt4agg import (FigureCanvasQTAgg as FigureCanvas)
 Ui_MainWindow, QMainWindow = loadUiType('mainwindow.ui')
-
+#GUI object that takes concession, rejection,etc as input 
 class Main(QMainWindow, Ui_MainWindow):
 		def __init__(self, ):
 				super(Main, self).__init__()
@@ -35,13 +38,16 @@ if __name__ == '__main__':
 	from PyQt4 import QtGui
 	participant_filepath = '../../data/iagostudystat.csv'
 
-
+	# This method takes four vectors representing offer data from 
+	#both the user and agent and creates vectors of offers that is equal length
 	def mergeconcessions(x1,x2,y1,y2): 
 		print x1
 		print y1
 		print "seperate"
 		print x2 
 		print y2
+		
+		
 		x1 = [int(i) for i in x1]
 		x2 = [int(i) for i in x2]
 		y1 = [int(i) for i in y1]
@@ -178,6 +184,7 @@ if __name__ == '__main__':
 				#print "unclaimedvalue: "
 				#print unclaimedvalue
 				#print unaskedquestionarray
+				# Determine verbal feedback based on cliams, rejections, questions asked, and agreement time data  
 				if(int(unclaimedvalue[0]) > 0):
 					additionclaims  = additionclaims + "up to %s more shipments of spices," %unclaimedvalue[0]
 				if(int(unclaimedvalue[1]) > 0):
@@ -238,6 +245,8 @@ if __name__ == '__main__':
 				#x[7].append(x[1])
 				#x[6].append(x[5])
 				#fig1, ax1 = plt.subplots(2,2)
+				
+				# Concession curve figure 
 				fig1 = Figure()
 				axarr = fig1.add_subplot(111)
 				axarr.set_title('Concession Curve')
@@ -265,11 +274,12 @@ if __name__ == '__main__':
 				
 				colors = ['green', 'orangered']
 				fig2 = Figure()
+				#Create percentage of total question asked Figure
 				axarr1 = fig2.add_subplot(111)
 				axarr1.pie(sizes, explode=explode, labels=labels,colors = colors, autopct='%1.1f%%', shadow=True, startangle=90)
 				axarr1.set_title('Percentage of total questions asked')
 
-
+				#Create Rejected Offer Figure 
 				fig3 = Figure()
 				axarr2 = fig3.add_subplot(111)
 				axarr2.barh(y_pos, objvale, align='center', alpha=0.5)
@@ -280,6 +290,8 @@ if __name__ == '__main__':
 				fig1.set_tight_layout(True)
 				fig2.tight_layout(pad = 2)
 				fig3.tight_layout(pad =2)
+				
+				#added figures and textual feedback to output array which is outputted to GUI 
 				output.append(fig1)
 				output.append(fig2)
 				output.append(fig3)
@@ -305,7 +317,7 @@ if __name__ == '__main__':
 		print "participant data: "
 		print participants_data[4]
 		return participants_data
-
+	#start 
 	file = open( participant_filepath, 'rb') 
 	readindata = csv.reader(file)
 
@@ -321,6 +333,7 @@ outputtedtext = output[3] + '\n\n' + output[4] + '\n\n' + output[5] + '\n\n' + o
 #print outputtedtext
 app = QtGui.QApplication(sys.argv)
 main = Main()
+#add data to Interface
 main.addconcession(output[0])
 main.addknowledge(output[1])
 main.addrejection(output[2])
