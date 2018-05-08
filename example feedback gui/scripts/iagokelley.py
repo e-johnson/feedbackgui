@@ -1,8 +1,8 @@
 import csv
 
 
-iago_data_file_path = '../data/iagostudy.txt'
-iagostudystat = '../data/iagostudystat.csv'
+iago_data_file_path = 'sarahiago.txt'
+iagostudystat = 'Sarahiagostudystat.csv'
 iago_study_data = open(iago_data_file_path,'r')
 participants_sessions =[]
 potentialquestion = ['what do you like the most?', 
@@ -26,7 +26,7 @@ def main():
 	count = 0
 	participant_file = open('participantmsg%s.txt'% i, 'w' );
 	for x in iago_study_data:
-		if 'From:	Johnathan Mell' in x:  
+		if 'DEBUG: <TO Server>:' in x:  
 
 
 			#print x
@@ -93,13 +93,13 @@ def main():
 					claims.append(initialclaim)
 					timeofclaim.append(currenttime)
 				else:    
-					claims.append(1 * int(stringinitial[7]) + 2 * int(stringinitial[15]) + 3 * int(stringinitial[23]) + 4 * int(stringinitial[31]) )
+					claims.append(3 * int(stringinitial[7]) + 4 * int(stringinitial[15]) + 2 * int(stringinitial[23]) + 1 * int(stringinitial[31]) )
 					timeofclaim.append(currenttime)
 				madefirstoffer = 1
-			elif(data[0].lower().startswith('A'.lower())): 
+			elif(len(data[0])>20): 
 				if(data[4].lower() == 'true'.lower()): 
 					timedout = 1
-			
+				
 				userpoints = data[2]
 				#questions = data[7]
 				#userid = data[0]
@@ -108,7 +108,7 @@ def main():
 				stringoffer = ''.join(opponentoffer)
 				print "opponent offer: " 
 				print stringoffer 
-				opponentclaims.append(4 * int(stringoffer[3]) + 3 * int(stringoffer[11]) + 2 * int(stringoffer[19]) + 1 * int(stringoffer[27]) )
+				opponentclaims.append(1 * int(stringoffer[3]) + 4 * int(stringoffer[11]) + 3 * int(stringoffer[19]) + 2 * int(stringoffer[27]) )
 				opponenttimeofclaim.append(currenttime)
 				
 
@@ -186,8 +186,8 @@ def main():
 	#print outputted_userdat
 	myfile = open(iagostudystat, 'wb')
 	wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
-	#label = ['UserId', 'Intial Claim', 'Agreement Time', 'Questions', 'Num of Rejection', 'User Points', 'Claims', 'Time of Claim', 'initially unclaimed']
-	#wr.writerow(label)
+	label = ['UserId', 'Intial Claim', 'Agreement Time', 'Questions', 'Num of Rejection', 'User Points', 'Claims', 'Time of Claim', 'initially unclaimed']
+	wr.writerow(label)
 	for data in outputted_userdat: 
 		wr.writerow(data)
 	myfile.close()
